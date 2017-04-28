@@ -1,0 +1,17 @@
+{
+  "name": "contactformlol",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Server.js",
+  "scripts": {
+    "start": "node server.js",
+    "style": "sass public/src/style.scss public/dist/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.15.2",
+    "jquery": "^3.2.1",
+    "nodemailer": "^4.0.1"
+  }
+}
