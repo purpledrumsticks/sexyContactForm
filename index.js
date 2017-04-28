@@ -6,8 +6,8 @@ const smtpTransport = nodemailer.createTransport({
   service: "gmail",
   host: "smtp.gmail.com",
   auth: {
-    user: "purpledrumsticks@gmail.com",
-    pass: "kfmmdcpsdrgvlrzi"
+    user: process.env.user,
+    pass: process.env.pass
   }
 })
 
@@ -18,7 +18,7 @@ app.get('/send', (req, res) => {
     name: req.query.name,
     email: req.query.email,
     message: req.query.message,
-    to: "purpledrumsticks@gmail.com",
+    to: process.env.user,
     from: req.query.name,
     text: "It is time to send " + req.query.name + " an email! Their email address is: " + req.query.email + ". Here is their message to you: " + req.query.message
   }

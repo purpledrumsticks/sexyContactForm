@@ -7,7 +7,7 @@ $(document).ready(function () {
 		let email = $('#email').val();
 		let message = $('#message').val();
 
-		$.get("http://localhost:3000/send", {name: name, email: email, message: message})
+		$.get("https://contact-form-lol.herokuapp.com/send", {name: name, email: email, message: message})
 		.done(() => {
 			console.log('workd!');
 			$('#contact').css('display', 'none');
